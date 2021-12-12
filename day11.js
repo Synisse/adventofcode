@@ -27,7 +27,6 @@ function addEnergy(aX, aY) {
             flashes++;
             activeOctopi.push({xPos: aX, yPos: aY});
             addEnergyToNeighbours(aX, aY);
-
         } else {
             if (!(activeOctopi.filter(aOctopi => _.isEqual(aOctopi, {xPos: aX, yPos: aY})).length > 0)) {
                 input[aX][aY] += 1;
@@ -65,7 +64,6 @@ function doCycle() {
 while(activeOctopi.length !== allOctopi) {
     cycles++;
     doCycle();
-
 }
 
 console.log('flashes: ', flashes);
